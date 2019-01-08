@@ -1,0 +1,15 @@
+{
+  "name": "jsService",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Patrick Connors",
+  "main": "server.js",
+  "license": "MIT License",
+  "repository": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
