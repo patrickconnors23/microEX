@@ -9,7 +9,12 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello world\n');
+  res.send("XYZ rocks\n");
+  console.log("DockerJS, baby");
+});
+
+app.get('/resource', (req, res) => {
+  res.send("No mas\n");
   console.log("DockerJS, baby");
 });
 

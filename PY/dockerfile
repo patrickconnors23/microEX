@@ -1,0 +1,8 @@
+FROM python:3.6
+WORKDIR /app
+COPY /pyService .
+RUN pip install -r req.txt
+ENV NODE_URL http://localhost:8080
+EXPOSE 9090
+ENTRYPOINT ["python"]
+CMD ["app.py"]
