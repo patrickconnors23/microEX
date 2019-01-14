@@ -1,24 +1,14 @@
-import requests, os
-from flask import Flask
+import requests, os, json
+from flask import Flask, jsonify
 app = Flask(__name__)
-
-
-try:
-    url = os.environ.get("JSMICRO_PORT")
-    jsHost = os.environ.get("JSMICRO_SERVICE_HOST")
-    jsPort = os.environ.get("JSMICRO_SERVICE_PORT")
-except:
-    url = ""
-    jsHost = ""
-    jsPort = ""
-
 
 @app.route('/')
 def hello():
-    print(jsHost, jsPort)
-    data = requests.get(f"http://{jsHost}:{jsPort}/")
-    print(data.text)
-    return  f"FLAAAAASK made a request to {data}"
+    return "Flask API home"
+
+@app.route('/resource')
+def getResource():
+    return jsonify({"specialPythonData": 983257487})
 
 if __name__ == '__main__':
     app.run(
