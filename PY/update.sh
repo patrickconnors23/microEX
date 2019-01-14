@@ -18,7 +18,6 @@ else
 fi
 
 docker tag patrickconnors/pyservice:$target gcr.io/microex/pyservice:$target
-
 if [ $? -eq 0 ]; then
   echo "tag succesfully"
 else
@@ -26,7 +25,6 @@ else
 fi
 
 docker push gcr.io/microex/pyservice:$target
-
 if [ $? -eq 0 ]; then
   echo "pushed to gcloud"
 else
