@@ -8,7 +8,10 @@ try:
     jsHost = os.environ.get("JSMICRO_SERVICE_HOST")
     jsPort = os.environ.get("JSMICRO_SERVICE_PORT")
 except:
-    url = "http://fb.com"
+    url = ""
+    jsHost = ""
+    jsPort = ""
+
 
 @app.route('/')
 def hello():
